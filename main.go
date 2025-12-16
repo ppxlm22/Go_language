@@ -73,15 +73,24 @@ func main (){
 	// mySlicev2 = append(mySlice,999)
 	// fmt.Println(cap(mySlicev2))
 
-	myMap := make (map[string]int)
+	// myMap := make (map[string]int)
 
-	myMap["banana"] = 25
-	myMap["mango"] = 40
-	myMap["coconut"] = 45
+	// myMap["banana"] = 25
+	// myMap["mango"] = 40
+	// myMap["coconut"] = 45
 	
-	fmt.Println("banana:",myMap)
+	// // fmt.Println("banana:",myMap)
 
-	delete(myMap,"coconut")
+	// // for key, value := range myMap {
+	// // 	fmt.Printf(" %s -> %d\n",key,value)
+	// // }
+
+	// myMap["pear"] = 20
+	// val, ok := myMap["pear"]
+	// if ok{
+	// 	fmt.Println("pear vale =",val)
+	// }else{
+	// 	fmt.Println("Not pear on mymap")
+	// }
 	
-
 }
