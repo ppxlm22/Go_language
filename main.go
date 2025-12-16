@@ -3,10 +3,29 @@ package main
 import (
 	// "github.com/ppxlm22/Go_language/palmNVS"
 	"fmt"
+
 )
-func main (){
+type Student struct{
+	Name string
+	Sex string
+	GPA float32
+	High int
+}
+
+
+func multinum(num1 int,num2 int)int{
+	return num1 * num2
+}
+	
+func main() {
+
+	// num1 := 10	
+	// num2 := 5
+	// sumNumber := multinum(num1,num2)
+	// fmt.Println(sumNumber)
+
 	// var score int = 155
-	// var grade string 
+	// var grade string
 	// if score >= 80 {
 	// 	grade = "A"
 	// }else if score >= 70 {
@@ -28,7 +47,7 @@ func main (){
 	// case 2:
 	// 	fmt.Print("Tuesday")
 	// case 3:
-	// 	fmt.Print("Wednesday")	
+	// 	fmt.Print("Wednesday")
 	// case 4:
 	// 	fmt.Print("Thursday")
 	// case 5:
@@ -38,9 +57,8 @@ func main (){
 	// case 7:
 	// 	fmt.Print("Sunday")
 	// default:
-	// 	fmt.Print("Invalid Day")			
+	// 	fmt.Print("Invalid Day")
 	// }
-
 
 	// for i :=0 ; i <= 10;i++{
 	// 	fmt.Printf("Hello palm:%d\n ", i)
@@ -57,8 +75,8 @@ func main (){
 
 	// for i := 0;i < len(myNumber);i++{
 	// 	fmt.Println("data in array",myNumber[i])
-	// } 
-	
+	// }
+
 	// mySlice := []int {1,2,3,4,5,6,7,8,9}
 	// mySlicev2 := [] int {}
 	// // fmt.Println(mySlice)
@@ -67,8 +85,8 @@ func main (){
 
 	// // subSlice := mySlice[1:5]
 	// // fmt.Println(subSlice)
-	// // fmt.Println(len(subSlice))	
-	// // fmt.Println(cap(subSlice)) 
+	// // fmt.Println(len(subSlice))
+	// // fmt.Println(cap(subSlice))
 
 	// mySlicev2 = append(mySlice,999)
 	// fmt.Println(cap(mySlicev2))
@@ -78,7 +96,7 @@ func main (){
 	// myMap["banana"] = 25
 	// myMap["mango"] = 40
 	// myMap["coconut"] = 45
-	
+
 	// // fmt.Println("banana:",myMap)
 
 	// // for key, value := range myMap {
@@ -92,5 +110,22 @@ func main (){
 	// }else{
 	// 	fmt.Println("Not pear on mymap")
 	// }
+
+	// var student1 [3]Student
+
+	// student1[0].Name = "palm"
+	// student1[0].Sex = "famale"
+	// student1[0].GPA = 2.71
+	// student1[0].High = 180
+
+	// student1[1].Name = "fang"
+	// student1[1].Sex = "male"
+	// student1[1].GPA = 4.00
+	// student1[1].High = 170
 	
+	// for i := 0;i < len(student1); i++{
+	// 	fmt.Println(student1[i].Name)
+	// }
+
+
 }
