@@ -1,19 +1,20 @@
 package main
 
 import (
-// 	"github.com/ppxlm22/Go_language/palmNVS"
+	// 	"github.com/ppxlm22/Go_language/palmNVS"
+	
+	"errors"
 	"fmt"
-
 )
+
 // type Student struct{
 // 	Firstname string
 // 	Lastname string
-	
+
 // }
 // func(s Student) FullName() string{
-// 	return  s.Firstname +" "+s.Lastname 
+// 	return  s.Firstname +" "+s.Lastname
 // }
-
 
 // func multinum(num1 int,num2 int)int{
 // 	return num1 * num2
@@ -25,7 +26,7 @@ import (
 // 	Name string
 // }
 // type Person struct{
-// 	Name string	
+// 	Name string
 // }
 // func (d Dog) speaker() string{
 // 	return "Woof"
@@ -36,12 +37,30 @@ import (
 // func makeSound (s speaker) {
 // 	fmt.Println(s.speaker())
 // }
+func divide (a, b int)(int, error){
+	if b == 0{
+		return 0,errors.New("cannot divide by zero")
+	}
+	return a/b, nil
+}
 
  
 	
-func main() {
-	cir := Circle{radius: 5.47}
-	fmt.Println(calculateArea(cir))
+func main() { 
+	result ,err := divide(50,0)
+	if err != nil{
+		fmt.Print("Error",err)
+		return
+	}
+	
+	// x:= 99
+	// var p *int = &x
+
+	// fmt.Println("Value of x: ",x)
+	// fmt.Println("Value of ")
+
+	// cir := Circle{radius: 5.47}
+	// fmt.Println(calculateArea(cir))
 
 	// dog := Dog{Name: "Buddy"}
 	// person := Person{Name:"Neung"}
