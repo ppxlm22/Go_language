@@ -1,24 +1,62 @@
 package main
 
 import (
-	// "github.com/ppxlm22/Go_language/palmNVS"
+// 	"github.com/ppxlm22/Go_language/palmNVS"
 	"fmt"
 
 )
-type Student struct{
-	Name string
-	Sex string
-	GPA float32
-	High int
-}
+// type Student struct{
+// 	Firstname string
+// 	Lastname string
+	
+// }
+// func(s Student) FullName() string{
+// 	return  s.Firstname +" "+s.Lastname 
+// }
 
 
-func multinum(num1 int,num2 int)int{
-	return num1 * num2
-}
+// func multinum(num1 int,num2 int)int{
+// 	return num1 * num2
+// }
+// type speaker interface{
+// 	speaker() string
+// }
+// type Dog struct{
+// 	Name string
+// }
+// type Person struct{
+// 	Name string	
+// }
+// func (d Dog) speaker() string{
+// 	return "Woof"
+// }
+// func (p Person) speaker() string{
+// 	return "Hola"
+// }
+// func makeSound (s speaker) {
+// 	fmt.Println(s.speaker())
+// }
+
+ 
 	
 func main() {
+	cir := Circle{radius: 5.47}
+	fmt.Println(calculateArea(cir))
 
+	// dog := Dog{Name: "Buddy"}
+	// person := Person{Name:"Neung"}
+	
+	// makeSound(dog)
+	// makeSound(person)
+
+	// student := Student{
+	// 	Firstname : "Kritaphat",
+	// 	Lastname : "Ngampriam",
+	// }
+
+	// fullName := student.FullName()
+	// fmt.Println(fullName)
+	
 	// num1 := 10	
 	// num2 := 5
 	// sumNumber := multinum(num1,num2)
