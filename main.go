@@ -23,6 +23,7 @@ func main (){
 	app.Get("/employees", getEmployees)
 	app.Get("/employees/:IDem", getEmployee)
 	app.Post("/employees", createEmployee)
+	app.Put("/employees/:IDem",updateEmployee)
 	app.Listen(":8080")
 }
 func getEmployees(c *fiber.Ctx) error{
@@ -51,3 +52,26 @@ func createEmployee (c *fiber.Ctx) error {
 	employees = append(employees, *employee)
 	return c.JSON(employee )
 } 
+func updateEmployee (c *fiber.Ctx) error{
+	employeeID, err := strconv.Atoi(c.Params("IDem"))  //chack id update
+
+	if err != nil{
+		return c.Status(fiber.StatusBadRequest).SendString(err.Error())
+	}
+	employeeUpdate := new(Employee)   //ตัวแทนรับอัพเดท
+
+	if err := c.BodyParser(employeeUpdate) ; err != nil {
+		return c.Status(fiber.StatusBadRequest).SendString(err.Error())
+	}
+
+	for i, employee := range employees {
+		if employee.IDem == employeeID {
+			employees[i].Firstname = employeeUpdate.Firstname
+			employees[i].Lastname = employeeUpdate.Lastname
+			employees[i].Salary = employeeUpdate.Salary  //อนุญาตอัพเดท
+			
+			return c.JSON(employees[i])
+		}
+	}
+	return c.SendStatus(fiber.StatusNotFound)
+}
