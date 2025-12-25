@@ -25,8 +25,10 @@ func main (){
 	app.Put("/employees/:IDem",updateEmployee)
 	app.Delete("/employees/:IDem",delectEmployee)
 
+	app.Post("/uploads/",uploadfile)
 	app.Listen(":8080")
 }
+
 
 	
 
