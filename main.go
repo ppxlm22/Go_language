@@ -24,6 +24,8 @@ func main (){
 	app.Get("/employees/:IDem", getEmployee)
 	app.Post("/employees", createEmployee)
 	app.Put("/employees/:IDem",updateEmployee)
+	app.Delete("/employees/:IDem",delectEmployee)
+
 	app.Listen(":8080")
 }
 func getEmployees(c *fiber.Ctx) error{
@@ -75,3 +77,22 @@ func updateEmployee (c *fiber.Ctx) error{
 	}
 	return c.SendStatus(fiber.StatusNotFound)
 }
+
+func delectEmployee (c *fiber.Ctx) error {
+	employeeID, err := strconv.Atoi(c.Params("IDem"))
+
+	if err != err {
+		return c.Status(fiber.StatusBadRequest).SendString(err.Error())
+	}
+
+	for i, employee := range employees {
+		if employee.IDem == employeeID{
+			employees = append(employees[:i],employees[i+1:]... )
+			return c.SendStatus(fiber.StatusNoContent)
+		}
+	}	
+	return c.SendStatus(fiber.StatusNoContent)
+}
+	
+
+
